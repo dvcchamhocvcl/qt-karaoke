@@ -9,6 +9,7 @@ MediaPlayer::MediaPlayer(AudioMixer* audioMixer, QObject *parent)
     , m_volume(1.0f)
     , m_playing(false)
     , m_videoSink(nullptr)
+    , m_playbackRate(1.0f)
 {
     // Create the QMediaPlayer instance with a specific render control
     m_mediaPlayer = new QMediaPlayer(this);
@@ -33,6 +34,12 @@ MediaPlayer::MediaPlayer(AudioMixer* audioMixer, QObject *parent)
                     emit playingChanged();
                 }
             });
+    
+    // Connect position and duration signals
+    connect(m_mediaPlayer, &QMediaPlayer::positionChanged,
+            this, &MediaPlayer::positionChanged);
+    connect(m_mediaPlayer, &QMediaPlayer::durationChanged,
+            this, &MediaPlayer::durationChanged);
     
     qDebug() << "MediaPlayer created with software rendering";
 }
@@ -238,5 +245,34 @@ void MediaPlayer::handleErrorOccurred(QMediaPlayer::Error error, const QString &
     Q_UNUSED(error);
     emit errorOccurred(errorString);
     qWarning() << "Media player error: " << errorString;
+}
+
+qint64 MediaPlayer::position() const
+{
+    return m_mediaPlayer->position();
+}
+
+void MediaPlayer::setPosition(qint64 position)
+{
+    m_mediaPlayer->setPosition(position);
+}
+
+qint64 MediaPlayer::duration() const
+{
+    return m_mediaPlayer->duration();
+}
+
+float MediaPlayer::playbackRate() const
+{
+    return m_playbackRate;
+}
+
+void MediaPlayer::setPlaybackRate(float rate)
+{
+    if (m_playbackRate != rate) {
+        m_playbackRate = rate;
+        m_mediaPlayer->setPlaybackRate(rate);
+        emit playbackRateChanged();
+    }
 }
 
