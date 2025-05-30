@@ -20,7 +20,7 @@ Rectangle {
     // Left panel for audio controls
     Rectangle {
         id: controlPanel
-        width: parent.width * 0.2
+        width: parent.width * 0.25
         height: parent.height
         color: "#f6f5f4"
 
@@ -38,7 +38,7 @@ Rectangle {
 
             onValueChanged: {
                 // Call the C++ method to adjust microphone volume
-                audioMixer.setInputVolume(value)
+                audioMixer.inputVolume = value
             }
 
             Text {
@@ -81,7 +81,7 @@ Rectangle {
     Rectangle {
         id: mediaPanel
         anchors.left: controlPanel.right
-        width: parent.width * 0.8
+        width: parent.width * 0.75
         height: parent.height
         color: "#2c2c2c"
 

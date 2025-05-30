@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 16.0.1, 2025-05-08T23:25:39. -->
+<!-- Written by QtCreator 16.0.1, 2025-05-30T10:23:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -109,20 +109,20 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
--DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Ninja
 -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja
--DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
--DCMAKE_BUILD_TYPE:STRING=Debug
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
+-DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}
+-DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_C_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_BUILD_TYPE:STRING=Debug
+-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
+-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
+-DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
+-DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -171,20 +171,20 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
--DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Ninja
 -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja
--DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
--DCMAKE_BUILD_TYPE:STRING=Release
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
+-DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}
+-DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_C_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_BUILD_TYPE:STRING=Release
+-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
+-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
+-DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
+-DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -231,20 +231,20 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
--DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Ninja
 -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja
--DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
--DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
+-DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}
+-DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_C_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
+-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
+-DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
+-DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-RelWithDebInfo</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -291,20 +291,20 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
--DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Ninja
 -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja
--DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
--DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
+-DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}
+-DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_C_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
+-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
+-DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
+-DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
     <value type="int" key="EnableQmlDebugging">0</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
@@ -352,20 +352,20 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
--DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Ninja
 -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/bin/ninja
--DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_GENERATOR:STRING=Ninja
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
--DCMAKE_BUILD_TYPE:STRING=MinSizeRel
 -DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
+-DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}
+-DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
+-DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
 -DCMAKE_C_COMPILER_TARGET:STRING=aarch64-poky-linux
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_BUILD_TYPE:STRING=MinSizeRel
+-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/x86_64-pokysdk-linux/usr/lib/cmake/Qt6/qt.toolchain.cmake
+-DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}
+-DCMAKE_SYSROOT:PATH=/home/dvc/Qt/6.9.0/Boot2Qt/raspberrypi-armv8/toolchain/sysroots/cortexa53-poky-linux
+-DCMAKE_CXX_COMPILER_TARGET:STRING=aarch64-poky-linux
+-DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-MinSizeRel</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
@@ -496,7 +496,7 @@
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">ProjectApp</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
     <value type="QString" key="QdbRunConfig.LocalExecutable">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-Debug/ProjectApp</value>
-    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@192.168.56.104/usr/bin/ProjectApp</value>
+    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@10.130.13.234/usr/bin/ProjectApp</value>
     <value type="int" key="RemoteLinux.EnvironmentAspect.Version">1</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
@@ -515,7 +515,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QdbLinuxRunConfiguration:</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">App</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
-    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@192.168.56.104</value>
+    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@10.130.13.234</value>
     <value type="int" key="RemoteLinux.EnvironmentAspect.Version">1</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
