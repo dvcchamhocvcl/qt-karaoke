@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 16.0.1, 2025-05-30T10:23:05. -->
+<!-- Written by QtCreator 16.0.1, 2025-05-30T11:13:59. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -496,7 +496,7 @@
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">ProjectApp</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
     <value type="QString" key="QdbRunConfig.LocalExecutable">/media/dvc/G/Hoc Dai/MultiMediaEmbeddedSys/Project/Project-Debug/ProjectApp</value>
-    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@10.130.13.234/usr/bin/ProjectApp</value>
+    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@172.20.10.2/usr/bin/ProjectApp</value>
     <value type="int" key="RemoteLinux.EnvironmentAspect.Version">1</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
@@ -515,7 +515,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QdbLinuxRunConfiguration:</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">App</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
-    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@10.130.13.234</value>
+    <value type="QString" key="QdbRunConfig.RemoteExecutable">ssh://root@172.20.10.2</value>
     <value type="int" key="RemoteLinux.EnvironmentAspect.Version">1</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>

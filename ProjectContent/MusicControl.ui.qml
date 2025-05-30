@@ -114,7 +114,7 @@ Rectangle {
             onTriggered: {
                 console.log("Setting up video sink connection");
                 mediaPlayerBackend.videoSink = videoOutput.videoSink;
-                mediaPlayerBackend.source = "/home/karaoke/nuathapki.mp4";
+                // mediaPlayerBackend.source = "/home/karaoke/nuathapki.mp4";
                 mediaPlayerBackend.volume = music_vol_control.value;
                 console.log("Setup complete");
             }
@@ -163,26 +163,32 @@ Rectangle {
                 text: "Stop"
                 onClicked: mediaPlayerBackend.stop()
             }
-
-            ComboBox {
-                id: mediaSelector
-                model: ["Video 1", "Video 2", "Video 3"] // Replace with your available media
-                onCurrentTextChanged: {
-                    // Set media source based on selection
-                    // This should be replaced with actual paths to your media files
-                    switch(currentText) {
-                        case "Video 1":
-                            mediaPlayerBackend.source = "/home/karaoke/nuathapki.mp4"
-                            break
-                        case "Video 2":
-                            mediaPlayerBackend.source = "/home/karaoke/codontrensofa.mp4"
-                            break
-                        case "Video 3":
-                            mediaPlayerBackend.source = "file:///path/to/video3.mp4"
-                            break
+            Button {
+                text: "Back"
+                onClicked: {
+                    startView.state = "Songselect"
                     }
                 }
-            }
+
+            // ComboBox {
+            //     id: mediaSelector
+            //     model: ["Video 1", "Video 2", "Video 3"] // Replace with your available media
+            //     onCurrentTextChanged: {
+            //         // Set media source based on selection
+            //         // This should be replaced with actual paths to your media files
+            //         switch(currentText) {
+            //             case "Video 1":
+            //                 mediaPlayerBackend.source = "/home/karaoke/nuathapki.mp4"
+            //                 break
+            //             case "Video 2":
+            //                 mediaPlayerBackend.source = "/home/karaoke/codontrensofa.mp4"
+            //                 break
+            //             case "Video 3":
+            //                 mediaPlayerBackend.source = "/home/karaoke/taivisao.mp4"
+            //                 break
+            //         }
+            //     }
+            // }
         }
     }
 }
