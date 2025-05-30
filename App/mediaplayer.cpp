@@ -1,6 +1,7 @@
 #include "mediaplayer.h"
 #include <QDebug>
 #include <QCoreApplication>
+#include <QTimer>
 
 MediaPlayer::MediaPlayer(AudioMixer* audioMixer, QObject *parent)
     : QObject(parent)
@@ -93,35 +94,43 @@ QVideoSink* MediaPlayer::videoSink() const
 void MediaPlayer::setVideoSink(QVideoSink* sink)
 {
     if (m_videoSink != sink) {
+        // Cleanup previous connection
+        if (m_videoSink) {
+            qDebug() << "Cleaning up previous video sink";
+            m_mediaPlayer->setVideoSink(nullptr);
+        }
+        
         m_videoSink = sink;
         
         if (sink) {
-            qDebug() << "Setting video sink on media player";
+            qDebug() << "Setting new video sink on media player";
             
-            // Make sure to reset any previous connection
-            QSignalBlocker blocker(m_mediaPlayer);
-            m_mediaPlayer->stop();
+            // Stop playback before changing video sink
+            bool wasPlaying = m_playing;
+            if (wasPlaying) {
+                m_mediaPlayer->pause();
+            }
             
-            // Use a slightly different approach - explicitly set the video output
-            // This can help with rendering in some Qt versions
-            m_mediaPlayer->setVideoOutput(nullptr); // Clear any previous
+            // Set the new video sink
             m_mediaPlayer->setVideoSink(sink);
             
-            // Check the video output status
-            if (m_mediaPlayer->hasVideo()) {
-                qDebug() << "Media player has video output after setting sink";
-            } else {
-                qDebug() << "Media player still has no video output after setting sink";
-                
-                // If we already have a source, try to reload it
-                if (!m_source.isEmpty()) {
-                    QUrl currentSource = m_source;
-                    m_mediaPlayer->setSource(QUrl()); // Reset to ensure the source change is detected
-                    m_mediaPlayer->setSource(currentSource); // Reload the source
-                }
+            // Check if we have a source loaded and reload if necessary
+            if (!m_source.isEmpty()) {
+                qDebug() << "Reloading source after video sink change";
+                QUrl currentSource = m_source;
+                m_mediaPlayer->setSource(QUrl()); // Clear first
+                m_mediaPlayer->setSource(currentSource); // Reload
+            }
+            
+            // Resume playback if it was playing before
+            if (wasPlaying) {
+                QTimer::singleShot(100, this, [this]() {
+                    m_mediaPlayer->play();
+                });
             }
         } else {
-            qWarning() << "Received null video sink!";
+            qDebug() << "Video sink set to null - clearing media player video output";
+            m_mediaPlayer->setVideoSink(nullptr);
         }
         
         emit videoSinkChanged();

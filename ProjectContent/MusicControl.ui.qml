@@ -109,14 +109,33 @@ Rectangle {
         Timer {
             id: setupTimer
             interval: 500 // half second delay
-            running: true
+            running: false // Don't auto-start
             repeat: false
             onTriggered: {
                 console.log("Setting up video sink connection");
-                mediaPlayerBackend.videoSink = videoOutput.videoSink;
-                // mediaPlayerBackend.source = "/home/karaoke/nuathapki.mp4";
-                mediaPlayerBackend.volume = music_vol_control.value;
-                console.log("Setup complete");
+                if (videoOutput.videoSink) {
+                    mediaPlayerBackend.videoSink = videoOutput.videoSink;
+                    mediaPlayerBackend.volume = music_vol_control.value;
+                    console.log("Setup complete");
+                } else {
+                    console.log("VideoOutput sink not ready, retrying...");
+                    setupTimer.restart();
+                }
+            }
+        }
+
+        // Setup video connection when component becomes visible
+        Component.onCompleted: {
+            console.log("MusicControl component loaded");
+            setupTimer.start();
+        }
+
+        // Cleanup when component is destroyed
+        Component.onDestruction: {
+            console.log("MusicControl component being destroyed");
+            if (mediaPlayerBackend) {
+                mediaPlayerBackend.stop();
+                mediaPlayerBackend.videoSink = null;
             }
         }
 
